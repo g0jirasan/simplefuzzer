@@ -4,7 +4,7 @@ import socket, sys, time, struct
 
 
 if len(sys.argv) < 2:
-	print "[-] Usage:%s <target address> <target port> <length of fuzz>"
+	print "[-] Usage:%s <target address>" #<target port> <length of fuzz>
 	print "[-] Example: fuzzer.py 192.168.1.100 22 3000"
 	sys.exit(0)
 
