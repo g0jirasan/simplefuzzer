@@ -4,12 +4,12 @@ import socket, sys, time, struct
 
 
 if len(sys.argv) < 2:
-	print "[-] Usage:%s <target address>" #<target port> <length of fuzz>
+	print "[-] Usage:%s <target address> <target port>" # <length of fuzz>
 	print "[-] Example: fuzzer.py 192.168.1.100 22 3000"
 	sys.exit(0)
 
 target = sys.argv[1]
-#port = sys.argv[2]
+port = sys.argv[2]
 #flength = sys.argv[3]
 
 buffer = 'x41'*50
@@ -26,7 +26,7 @@ while True:
 	s = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
 	try:
 		s.settimeout(2)
-		s.connect((target, 22))
+		s.connect((target, port))
 		s.recv(1024)
 
 
