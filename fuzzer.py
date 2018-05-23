@@ -16,7 +16,7 @@ buffer = 'x41'*50
 
 print "\
 [+] Basic Fuzzer v1.0\n\
-[+] Author: Chris Neal (g0jirasan)\n\
+[+] Author: g0jirasan\n\
 [+] Connecting to "+target
 
 
